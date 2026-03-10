@@ -4,3 +4,7 @@
 microwalk/traces
 microwalk/testcases
 node_modules
+
+#CMake
+cmake-build-*/
+build/

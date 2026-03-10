@@ -1,0 +1,8 @@
+[submodule "microwalk"]
+	path = microwalk
+	url = git@github.com:ubc-systopia/Microwalk.git
+	branch = localization
+[submodule "quickjs"]
+	path = quickjs
+	url = git@github.com:ubc-systopia/quickjs.git
+	branch = localization
