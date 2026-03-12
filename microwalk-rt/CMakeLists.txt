@@ -31,5 +31,6 @@ foreach (SCRIPT_FILE IN LISTS SCRIPT_FILES)
     set_tests_properties(quickjs-bytecode-${SCRIPT_NAME} PROPERTIES
             LABELS quickjs-bytecode
             ENVIRONMENT "TARGET_NAME=quickjs-bytecode;ROOT_DIR=${CMAKE_CURRENT_BINARY_DIR};SUBTARGET_NAME=${SCRIPT_NAME};SCRIPT_FILE=${SCRIPT_FILE};PIN_ROOT=${PIN_ROOT};MICROWALK_DIR=${MWRT_INSTALL_DIR};TESTCASE_DIRECTORY=${TESTCASE_DIRECTORY}"
+            PASS_REGULAR_EXPRESSION "Unique leaking instructions"
     )
 endforeach ()
