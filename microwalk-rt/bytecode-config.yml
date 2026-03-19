@@ -54,6 +54,7 @@ analysis:
                   - $$$ROOT_DIR$$$/libquickjs.so.map
                   - $$$ROOT_DIR$$$/libquickjs-dcfl.so.map
                   - $$WORK_DIR$$/work/traces/alias.txt
+              source-info-mappings: $$WORK_DIR$$/work/traces/source-info-mappings.txt
               dump-call-tree: true
               include-testcases-in-call-stacks: true
         - module: dump
@@ -65,6 +66,7 @@ analysis:
                   - $$$ROOT_DIR$$$/libquickjs.so.map
                   - $$$ROOT_DIR$$$/libquickjs-dcfl.so.map
                   - $$WORK_DIR$$/work/traces/alias.txt
+              source-info-mappings: $$WORK_DIR$$/work/traces/source-info-mappings.txt
 
     options:
         input-buffer-size: 1

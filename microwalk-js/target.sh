@@ -20,6 +20,12 @@ $NODE_EXE "${MWRT_INSTALL_DIR}/bin/JavascriptTracer/instrument-file.mjs" "$BUILD
 popd
 export BUILD_SCRIPT_FILE="$WORK_DIR/js/$SUBTARGET_NAME.mw.mjs"
 
+# Rename .js files to .mjs so Node treats them as modules
+find "$WORK_DIR/lib" -name "*.mw.js" -exec sh -c 'mv "$1" "${1%.js}.mjs"' _ {} \;
+
+# Update references inside those files
+find "$WORK_DIR" -name "*.mw.mjs" -exec sed -i 's/\.mw\.js/.mw.mjs/g' {} +
+
 # Append wrapper script
 echo -e "\n$(cat "$TEST_BASE")" >> "$BUILD_SCRIPT_FILE"
 
