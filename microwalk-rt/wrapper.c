@@ -75,13 +75,14 @@ static void trace(const char *script_path) {
     // ReSharper disable once CppRedundantDereferencingAndTakingAddress
     PinNotifyAllocation((uint64_t) &errno, 8);
 
-    // Set up target. Allocations made here will end up in the trace prefix
     const int stdout_fd = redirectStdOutToStdErr();
-    init_target(script_path);
-    redirectStdOutToStdOut(stdout_fd);
 
     // Setup target filter
     init_target_filter();
+
+    // Set up target. Allocations made here will end up in the trace prefix
+    init_target(script_path);
+    redirectStdOutToStdOut(stdout_fd);
 
     char command_buffer[512] = {};
     bool target_initialized = false;
@@ -119,7 +120,7 @@ static void trace(const char *script_path) {
                 mw_exit_error("Could not open testcase file '%s', error '%s' (%d)", command_buffer, strerror(errno),
                               errno);
             }
-            fread(input_buffer, 1, input_buffer_size, input_file);
+            const size_t read_size = fread(input_buffer, 1, input_buffer_size, input_file);
             if (ferror(input_file)) {
                 mw_exit_error("Could not read testcase file '%s'. Error '%s' (%d)", command_buffer, strerror(errno),
                               errno);
@@ -137,12 +138,12 @@ static void trace(const char *script_path) {
 
             // If the target was not yet initialized, do a dummy run of the subtarget
             if (!target_initialized) {
-                execute(input_buffer, input_file_length);
+                execute(input_buffer, read_size);
                 target_initialized = true;
             }
 
             PinNotifyTestcaseStart(testcase_id);
-            execute(input_buffer, input_file_length);
+            execute(input_buffer, read_size);
             PinNotifyTestcaseEnd();
 
             cleanup_target_run();
