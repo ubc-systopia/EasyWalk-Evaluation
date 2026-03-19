@@ -28,7 +28,6 @@ trace:
             - $$$SCRIPT_FILE$$$
         images:
             - libquickjs.so
-            - libquickjs-dcfl.so
             - $$$TARGET_NAME$$$
     options:
         input-buffer-size: 4
@@ -52,7 +51,6 @@ analysis:
               map-files:
                   - $$$ROOT_DIR$$$/$$$TARGET_NAME$$$.map
                   - $$$ROOT_DIR$$$/libquickjs.so.map
-                  - $$$ROOT_DIR$$$/libquickjs-dcfl.so.map
                   - $$WORK_DIR$$/work/traces/alias.txt
               source-info-mappings: $$WORK_DIR$$/work/traces/source-info-mappings.txt
               dump-call-tree: true
@@ -64,7 +62,6 @@ analysis:
               map-files:
                   - $$$ROOT_DIR$$$/$$$TARGET_NAME$$$.map
                   - $$$ROOT_DIR$$$/libquickjs.so.map
-                  - $$$ROOT_DIR$$$/libquickjs-dcfl.so.map
                   - $$WORK_DIR$$/work/traces/alias.txt
               source-info-mappings: $$WORK_DIR$$/work/traces/source-info-mappings.txt
 
