@@ -142,6 +142,8 @@ static void trace(const char *script_path) {
                 target_initialized = true;
             }
 
+            fprintf(stderr, "Testcase %d\n", testcase_id);
+
             PinNotifyTestcaseStart(testcase_id);
             execute(input_buffer, read_size);
             PinNotifyTestcaseEnd();
