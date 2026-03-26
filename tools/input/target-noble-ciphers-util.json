@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "tcId": 0,
+      "comment": "Standard lowercase hex: '0123456789abcdef'",
+      "key": "30313233343536373839616263646566"
+    },
+    {
+      "tcId": 1,
+      "comment": "Standard uppercase hex: 'ABCDEF0123456789'",
+      "key": "41424344454630313233343536373839"
+    },
+    {
+      "tcId": 2,
+      "comment": "Mixed case: 'aBcCdeEf'",
+      "key": "6142634364654566"
+    },
+    {
+      "tcId": 3,
+      "comment": "All zeros string: '00000000'",
+      "key": "3030303030303030"
+    },
+    {
+      "tcId": 4,
+      "comment": "All Fs string: 'ffffffff'",
+      "key": "6666666666666666"
+    }
+  ]
+}

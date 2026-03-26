@@ -1,0 +1,35 @@
+{
+    "tests": [
+        {
+            "name": "F.1.5 ECB-AES256.Encrypt",
+            "cipher": "ecb",
+            "key": "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4",
+            "blocks": [
+                {
+                    "plaintext": "6bc1bee22e409f96e93d7e117393172a",
+                    "input": "6bc1bee22e409f96e93d7e117393172a",
+                    "output": "f3eed1bdb5d2a03c064b5a7e3db181f8",
+                    "ciphertext": "f3eed1bdb5d2a03c064b5a7e3db181f8"
+                },
+                {
+                    "plaintext": "ae2d8a571e03ac9c9eb76fac45af8e51",
+                    "input": "ae2d8a571e03ac9c9eb76fac45af8e51",
+                    "output": "591ccb10d410ed26dc5ba74a31362870",
+                    "ciphertext": "591ccb10d410ed26dc5ba74a31362870"
+                },
+                {
+                    "plaintext": "30c81c46a35ce411e5fbc1191a0a52ef",
+                    "input": "30c81c46a35ce411e5fbc1191a0a52ef",
+                    "output": "b6ed21b99ca6f4f9f153e7b1beafed1d",
+                    "ciphertext": "b6ed21b99ca6f4f9f153e7b1beafed1d"
+                },
+                {
+                    "plaintext": "f69f2445df4f9b17ad2b417be66c3710",
+                    "input": "f69f2445df4f9b17ad2b417be66c3710",
+                    "output": "23304b7a39f9f3ff067d8d8f9e24ecc7",
+                    "ciphertext": "23304b7a39f9f3ff067d8d8f9e24ecc7"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,296 @@
+{
+    "type" : "IndCpaTest",
+    "keySize" : 256,
+    "ivSize" : 128,
+    "tests" : [
+        {
+            "tcId" : 145,
+            "comment" : "empty message",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "7bf9e536b66a215c22233fe2daaa743a898b9acb9f7802de70b40e3d6e43ef97",
+            "iv" : "eb38ef61717e1324ae064e86f1c3e797",
+            "msg" : "",
+            "ct" : "e7c166554d1bb32792c981fa674cc4d8",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 146,
+            "comment" : "message size divisible by block size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "612e837843ceae7f61d49625faa7e7494f9253e20cb3adcea686512b043936cd",
+            "iv" : "9ec7b863ac845cad5e4673da21f5b6a9",
+            "msg" : "cc37fae15f745a2f40e2c8b192f2b38d",
+            "ct" : "299295be47e9f5441fe83a7a811c4aeb2650333e681e69fa6b767d28a6ccf282",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 147,
+            "comment" : "message size divisible by block size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "96e1e4896fb2cd05f133a6a100bc5609a7ac3ca6d81721e922dadd69ad07a892",
+            "iv" : "e70d83a77a2ce722ac214c00837acedf",
+            "msg" : "91a17e4dfcc3166a1add26ff0e7c12056e8a654f28a6de24f4ba739ceb5b5b18",
+            "ct" : "a615a39ff8f59f82cf72ed13e1b01e32459700561be112412961365c7a0b58aa7a16d68c065e77ebe504999051476bd7",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 148,
+            "comment" : "message size divisible by block size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "649e373e681ef52e3c10ac265484750932a9918f28fb824f7cb50adab39781fe",
+            "iv" : "bd003c0a9d804c29f053a77cb380cb47",
+            "msg" : "39b447bd3a01983c1cb761b456d69000948ceb870562a536126a0d18a8e7e49b16de8fe672f13d0808d8b7d957899917",
+            "ct" : "ed3ed8ecdbabc0a8c06259e913f3ab9a1f1dc6d05e5dfdd9c80e1008f3423064d540681291bbd3e159820fee3ff190a68fe506d8ab9e62c8e7b3816093336dbc",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 149,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "e754076ceab3fdaf4f9bcab7d4f0df0cbbafbc87731b8f9b7cd2166472e8eebc",
+            "iv" : "014d2e13dfbcb969ba3bb91442d52eca",
+            "msg" : "40",
+            "ct" : "42c0b89a706ed2606cd94f9cb361fa51",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 150,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "ea3b016bdd387dd64d837c71683808f335dbdc53598a4ea8c5f952473fafaf5f",
+            "iv" : "fae3e2054113f6b3b904aadbfe59655c",
+            "msg" : "6601",
+            "ct" : "b90c326b72eb222ddb4dae47f2bc223c",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 151,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "73d4709637857dafab6ad8b2b0a51b06524717fedf100296644f7cfdaae1805b",
+            "iv" : "203cd3e0068e43d38b6f2e48a188f252",
+            "msg" : "f1d300",
+            "ct" : "567c45c5e6d570bef583d21cac43757d",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 152,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "d5c81b399d4c0d1583a13da56de6d2dc45a66e7b47c24ab1192e246dc961dd77",
+            "iv" : "abcf220eede012279c3a2d33295ff273",
+            "msg" : "2ae63cbf",
+            "ct" : "c45afe62fc9351ad0fc9b03bc2f3a91f",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 153,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "2521203fa0dddf59d837b2830f87b1aa61f958155df3ca4d1df2457cb4284dc8",
+            "iv" : "01373953578902909ae4f6cb0a72587c",
+            "msg" : "af3a015ea1",
+            "ct" : "281fa533d0740cc6cdf94dd1a5f7402d",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 154,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "665a02bc265a66d01775091da56726b6668bfd903cb7af66fb1b78a8a062e43c",
+            "iv" : "3fb0d5ecd06c71150748b599595833cb",
+            "msg" : "3f56935def3f",
+            "ct" : "3f3f39697bd7e88d85a14132be1cbc48",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 155,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "facd75b22221380047305bc981f570e2a1af38928ea7e2059e3af5fc6b82b493",
+            "iv" : "27a2db6114ece34fb6c23302d9ba07c6",
+            "msg" : "57bb86beed156f",
+            "ct" : "379990d91557614836381d5026fa04a0",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 156,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "505aa98819809ef63b9a368a1e8bc2e922da45b03ce02d9a7966b15006dba2d5",
+            "iv" : "9b2b631e3f24bdc814a14abb3416059e",
+            "msg" : "2e4e7ef728fe11af",
+            "ct" : "7ecefe24caa78a68f4031d40fdb9a43a",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 157,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "f942093842808ba47f64e427f7351dde6b9546e66de4e7d60aa6f328182712cf",
+            "iv" : "92cfc4eb146b18b73fc76483fc5e1229",
+            "msg" : "852a21d92848e627c7",
+            "ct" : "ffe4ec8baf4af40ab2e7f4d6193fae9c",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 158,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "64be162b39c6e5f1fed9c32d9f674d9a8cde6eaa2443214d86bd4a1fb53b81b4",
+            "iv" : "4ceed8dcb75b6259dad737bdef96f099",
+            "msg" : "195a3b292f93baff0a2c",
+            "ct" : "ef96215e7950e7be8aae78b9ec8aaf39",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 159,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "b259a555d44b8a20c5489e2f38392ddaa6be9e35b9833b67e1b5fdf6cb3e4c6c",
+            "iv" : "2d4cead3f1120a2b4b59419d04951e20",
+            "msg" : "afd73117330c6e8528a6e4",
+            "ct" : "4ed0eac75b05868078303875f82fb4f0",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 160,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "2c6fc62daa77ba8c6881b3dd6989898fef646663cc7b0a3db8228a707b85f2dc",
+            "iv" : "a10392634143c2a3332fa0fb3f72200a",
+            "msg" : "0ff54d6b6759120c2e8a51e3",
+            "ct" : "f4d298caea7c390fc8c7f558f584f852",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 161,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "abab815d51df29f740e4e2079fb798e0152836e6ab57d1536ae8929e52c06eb8",
+            "iv" : "38b916a7ad3a9251ae3bd8865ca3a688",
+            "msg" : "f0058d412a104e53d820b95a7f",
+            "ct" : "5e1c00e2ec829f92b87c6adf5c25262d",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 162,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "3d5da1af83f7287458bff7a7651ea5d8db72259401333f6b82096996dd7eaf19",
+            "iv" : "bfcc3ac44d12e42d780c1188ac64b57f",
+            "msg" : "aacc36972f183057919ff57b49e1",
+            "ct" : "bf3a04ddb2dbfe7c6dc9e15aa67be25d",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 163,
+            "comment" : "small plaintext size",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "c19bdf314c6cf64381425467f42aefa17c1cc9358be16ce31b1d214859ce86aa",
+            "iv" : "35bc82e3503b95044c6406a8b2c2ecff",
+            "msg" : "5d066a92c300e9b6ddd63a7c13ae33",
+            "ct" : "fdcfa77f5bd09326b4c11f9281b72474",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 164,
+            "comment" : "plaintext size > 16",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "73216fafd0022d0d6ee27198b2272578fa8f04dd9f44467fbb6437aa45641bf7",
+            "iv" : "4b74bd981ea9d074757c3e2ef515e5fb",
+            "msg" : "d5247b8f6c3edcbfb1d591d13ece23d2f5",
+            "ct" : "fbea776fb1653635f88e2937ed2450ba4e9063e96d7cdba04928f01cb85492fe",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 165,
+            "comment" : "plaintext size > 16",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "c2039f0d05951aa8d9fbdf68be58a37cf99bd1afcedda286a9db470c3729ca92",
+            "iv" : "9a1d8ccc24c5e4d3995480af236be103",
+            "msg" : "ed5b5e28e9703bdf5c7b3b080f2690a605fcd0d9",
+            "ct" : "3a79bb6084c7116b58afe52d7181a0aacee1caa11df959090e2e7b0073d74817",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 166,
+            "comment" : "plaintext size > 16",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "4f097858a1aec62cf18f0966b2b120783aa4ae9149d3213109740506ae47adfe",
+            "iv" : "400aab92803bcbb44a96ef789655b34e",
+            "msg" : "ee53d8e5039e82d9fcca114e375a014febfea117a7e709d9008d43858e3660",
+            "ct" : "642b11efb79b49e5d038bc7aa29b8c6c3ce0bf11c3a69670eb565799908be66d",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 167,
+            "comment" : "plaintext size > 16",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "5f99f7d60653d79f088dd07ef306b65e057d36e053fa1c9f6854425c019fd4df",
+            "iv" : "6eedf45753ffe38f2407fbc28ab5959c",
+            "msg" : "fcc9212c23675c5d69a1266c77389bc955e453daba20034aabbcd502a1b73e05af30f8b7622abdbc",
+            "ct" : "a9b051354f0cf61f11921b330e60f996de796aeb68140a0f9c5962e1f48e4805262fb6f53b26d9bb2fa0e359efe14734",
+            "result" : "valid"
+        },
+        {
+            "tcId" : 168,
+            "comment" : "plaintext size > 16",
+            "flags" : [
+            "Pseudorandom"
+            ],
+            "key" : "95aaa5df4ccb529e9b2dc929e770c1f419f8e8933bfb36f632f532b3dcad2ba6",
+            "iv" : "f88551c6aa197f9ad80251c2e32d7663",
+            "msg" : "f5735567b7c8312f116517788b091cc6cb1d474b010a77910154fd11c3b2f0cd19f713b63d66492e8cc7ee8ad714783f46c305a26416e11ff4b99ec5ce2550593cc5ec1b86ba6a66d10f82bdff827055",
+            "ct" : "5074f46f1a6d0eeff070d623172eb15bbfc83e7d16466a00c9da5f4545eecf44adbf60cf9ac9aa1a3ec5eca22d4a34a7b21ca44d214c9d04ab1cb0b2c07001de9adb46f3c12f8f48436b516a409bf6cbdf1871dee3115d5cbb7943558b68867e",
+            "result" : "valid"
+        }
+    ]
+}
+

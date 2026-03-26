@@ -1,0 +1,36 @@
+{
+    "tests": [
+        {
+            "name": "F.5.6 CTR-AES256.Decrypt",
+            "cipher": "ctr",
+            "key": "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4",
+            "iv": "f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+            "blocks": [
+                {
+                    "input": "f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+                    "output": "0bdf7df1591716335e9a8b15c860c502",
+                    "ciphertext": "601ec313775789a5b7a7f504bbf3d228",
+                    "plaintext": "6bc1bee22e409f96e93d7e117393172a"
+                },
+                {
+                    "input": "f0f1f2f3f4f5f6f7f8f9fafbfcfdff00",
+                    "output": "5a6e699d536119065433863c8f657b94",
+                    "ciphertext": "f443e3ca4d62b59aca84e990cacaf5c5",
+                    "plaintext": "ae2d8a571e03ac9c9eb76fac45af8e51"
+                },
+                {
+                    "input": "f0f1f2f3f4f5f6f7f8f9fafbfcfdff01",
+                    "output": "1bc12c9c01610d5d0d8bd6a3378eca62",
+                    "ciphertext": "2b0930daa23de94ce87017ba2d84988d",
+                    "plaintext": "30c81c46a35ce411e5fbc1191a0a52ef"
+                },
+                {
+                    "input": "f0f1f2f3f4f5f6f7f8f9fafbfcfdff02",
+                    "output": "2956e1c8693536b1bee99c73a31576b6",
+                    "ciphertext": "dfc9c58db67aada613c2dd08457941a6",
+                    "plaintext": "f69f2445df4f9b17ad2b417be66c3710"
+                }
+            ]
+        }
+    ]
+}
