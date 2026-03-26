@@ -6,8 +6,8 @@ export function processTestcase(testcaseBuffer) {
         1, 1, 2, 2, 3, 3, 4, 4, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8,
         5, 5, 6, 6, 7, 7, 8, 8,
     ]);
-    const key = new Uint8Array(testcaseBuffer.subarray(0, 32));
-    const nonce = new Uint8Array(testcaseBuffer.subarray(32));
+    const key = new Uint8Array(testcaseBuffer.slice(0, 32));
+    const nonce = new Uint8Array(testcaseBuffer.slice(32, 48));
     const cipher = ctr(key, nonce);
     const encrypted = cipher.encrypt(message);
     console.log(encrypted);
