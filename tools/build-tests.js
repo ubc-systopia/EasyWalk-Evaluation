@@ -9,8 +9,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- File Configuration ---
-const INPUT_FILE = path.join(__dirname, 'input', 'target-noble-ciphers-util.json');
-const OUTPUT_DIR = path.join(__dirname, 'output', 'target-noble-ciphers-util');
+const INPUT_FILE = path.join(__dirname, 'input', 'target-noble-ciphers-xsalsa20-poly1305.json');
+const OUTPUT_DIR = path.join(__dirname, 'output', 'target-noble-ciphers-xsalsa20-poly1305');
 // --- End of File Configuration ---
 
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -51,4 +51,42 @@ function generateTestFiles() {
     }
 }
 
-generateTestFiles();
+// Test parseer for xsalsa
+function generateTestFilesFromList() {
+    try {
+        const rawData = fs.readFileSync(INPUT_FILE, 'utf8');
+        const tests = JSON.parse(rawData);
+
+        if (!Array.isArray(tests)) {
+            throw new Error("JSON structure invalid: Expected an array of test cases.");
+        }
+
+        tests.forEach((test, index) => {
+            // Index 0 is Key (Base64), Index 1 is IV (Base64)
+            const keyBuffer = Buffer.from(test[0], 'base64');
+            const ivBuffer = Buffer.from(test[1], 'base64');
+
+            // Verify lengths to ensure they match your processTestcase (32 + 24)
+            if (keyBuffer.length !== 32 || ivBuffer.length !== 24) {
+                console.warn(`Skipping t${index}: Invalid lengths (Key: ${keyBuffer.length}, IV: ${ivBuffer.length})`);
+                return;
+            }
+
+            const combined = Buffer.concat([keyBuffer, ivBuffer]);
+
+            const fileName = `t${index}.testcase`;
+            const filePath = path.join(OUTPUT_DIR, fileName);
+            
+            fs.writeFileSync(filePath, combined);
+
+            console.log(`Extracted ${fileName}: Key(${keyBuffer.length}B) IV(${ivBuffer.length}B) Total(${combined.length}B)`);
+        });
+
+        console.log(`\nSuccess: Created ${tests.length} files in ${OUTPUT_DIR}`);
+    } catch (err) {
+        console.error("Error processing tests:", err.message);
+    }
+}
+
+// generateTestFiles();
+generateTestFilesFromList();
