@@ -17,7 +17,7 @@ if (!fs.existsSync(OUTPUT_DIR)) {
 }
 
 // Builds generate tests for asymmetric keys
-function generateRandomTestCases(count = 15) {
+function generateRandomTestCases(count = 16) {
     for (let i = 0; i < count; i++) {
         // Replace combined with key function and buffer generation.
         const combined = Buffer.concat([Buffer.from(x25519.utils.randomPrivateKey()), Buffer.from(x25519.getPublicKey(x25519.utils.randomPrivateKey()))]);
@@ -31,4 +31,4 @@ function generateRandomTestCases(count = 15) {
     }
 }
 
-generateRandomTestCases(15);
+generateRandomTestCases(16);

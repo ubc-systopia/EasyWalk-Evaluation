@@ -9,8 +9,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- File Configuration ---
-const INPUT_FILE = path.join(__dirname, 'input', 'target-noble-ciphers-xsalsa20-poly1305.json');
-const OUTPUT_DIR = path.join(__dirname, 'output', 'target-noble-ciphers-xsalsa20-poly1305');
+const INPUT_FILE = path.join(__dirname, 'input', 'target-noble-ciphers-aes-ecb.json');
+const OUTPUT_DIR = path.join(__dirname, 'output', 'target-noble-ciphers-aes-ecb');
 // --- End of File Configuration ---
 
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -88,5 +88,5 @@ function generateTestFilesFromList() {
     }
 }
 
-// generateTestFiles();
-generateTestFilesFromList();
+generateTestFiles();
+// generateTestFilesFromList();
